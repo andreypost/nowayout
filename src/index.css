@@ -354,8 +354,9 @@ i, .inlineblock, ::before, ::after, footer nav a {
 .card__discount {
   position: absolute;
   top: 30px;
-  left: -5px;
-  width: 364px;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: 82px;
   background: url(./img/backred.png) center center no-repeat;
 }
