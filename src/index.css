@@ -1,13 +1,395 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Outer_Sans_Bold;
+  src: url(./fonts/MADE_Outer_Sans_Bold_PERSONAL_USE.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Outer_Sans_Black;
+  src: url(./fonts/MADE_Outer_Sans_Black_PERSONAL_USE.otf);
+}
+
+@font-face {
+  font-family: Outer_Sans_Thin;
+  src: url(./fonts/MADE_Outer_Sans_Thin_PERSONAL_USE.otf);
+}
+
+@font-face {
+  font-family: Morganite_Bold;
+  src: url(./fonts/Morganite_Bold.ttf);
+}
+
+body {
+  height: 100%;
+  height: 3000px;
+  background: url(./img/AU_FG_Texture-120.png), #000;
+  mix-blend-mode: lighten;
+}
+
+.width, body, img {
+  width: 100%;
+}
+
+.sansBold {
+  font-family: 'Outer_Sans_Bold', sans-serif;
+}
+
+.sansBlack {
+  font-family: 'Outer_Sans_Black', sans-serif;
+}
+
+.sansThin {
+  font-family: 'Outer_Sans_Thin', sans-serif;
+}
+
+.morganiteBold {
+  font-family: 'Morganite_Bold', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {}
+
+i {}
+
+input, button {
+  border: none;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+legend {}
+
+img {
+  height: auto;
+  object-fit: contain;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #DADCDD
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background: #CCCECF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body * {
+  scrollbar-width: none;
+}
+
+/* Firefox */
+
+.none {
+  display: none;
+}
+
+.block, .baseheader__list {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+i, .inlineblock, ::before, ::after, footer nav a {
+  display: inline-block;
+}
+
+.px36, .card__title h2 {
+  font-size: 36px;
+}
+
+.px18 {
+  font-size: 18px;
+}
+
+.px14, .header__nav a, .card__title p {
+  font-size: 14px;
+}
+
+.px12 {
+  font-size: 12px;
+}
+.userselect {
+  user-select: none;
+}
+
+.pointer, button {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.flexcentbet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexcentaround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flexstartbet {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flexcent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexcentstart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flexcolcent {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.marginbot {
+  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.centertext {
+  text-align: center;
+}
+
+.righttext {
+  text-align: right;
+}
+
+.white, .header__nav a, .header__nav a.active:hover {
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.header__nav {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40px;
+  margin: 80px auto 60px;
+}
+
+.header__nav a.active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.header__links {
+  width: 400px;
+  justify-self: flex-start;
+}
+
+.header__burger {
+  width: 60px;
+  height: 30px;
+}
+
+.header__burger i {
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  transition: all .2s;
+  background: white;
+  z-index: 9999;
+}
+
+.header__burger i:nth-of-type(1) {
+  top: 6px;
+}
+
+.header__burger i:nth-of-type(2) {
+  top: 15px;
+}
+
+.header__burger i:nth-of-type(3) {
+  top: 24px;
+}
+
+.header__burger i:nth-of-type(1).active, .header__burger i:nth-of-type(3).active {
+  height: 3px;
+}
+
+.header__burger i:nth-of-type(1).active {
+  transform: translate(0, 9.5px) rotate(60deg);
+}
+
+.header__burger i:nth-of-type(2).active {
+  opacity: 0;
+}
+
+.header__burger i:nth-of-type(3).active {
+  transform: translate(0, -9.5px) rotate(-60deg);
+}
+
+.header__logo {
+  margin: auto;
+}
+
+.header__logo svg {
+  width: 200px;
+  height: 33px;
+}
+
+.header__cabinet {
+  width: 320px;
+  justify-self: flex-end;
+}
+
+.header__bag {
+  width: 30px;
+  height: 30px;
+}
+
+.header__shop {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+}
+
+.header__count {
+  position: absolute;
+  top: -5px;
+  right: -7px;
+}
+
+.header__lung {
+  width: 60px;
+}
+
+.card__vision {
+  height: 800px;
+}
+
+.card__vision.one {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(./img/Image_000.jpg) center center no-repeat;
+}
+
+.card__vision.two {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(./img/Image_001.jpg) center center no-repeat;
+}
+
+.card__vision.three {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(./img/Image_002.jpg) center center no-repeat;
+}
+
+.card__vision.four {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(./img/Image_003.jpg) center center no-repeat;
+}
+
+.card__vision.five {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(./img/Image_004.jpg) center center no-repeat;
+}
+
+.card__vision:hover {
+  height: 798px;
+  border: 1px solid red;
+}
+
+.card__vision a {
+  display: flex;
+  height: 100%;
+}
+
+.card__title {
+  max-width: 240px;
+  margin: auto auto 50px;
+}
+
+.card__text.active::after {
+  content: url(./img/Union.png);
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.card__discount {
+  position: absolute;
+  top: 30px;
+  left: -5px;
+  width: 364px;
+  height: 82px;
+  background: url(./img/backred.png) center center no-repeat;
+}
+
+.card__discount h2 {
+  font-size: 56px;
+}
+
+.card__discount h4 {
+  margin-bottom: 4px;
+}
+
+.card__discount p {
+  margin-top: 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .header__nav {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 80px;
+    grid-auto-rows: 60px;
+    margin: 60px auto;
+  }
+  .header__links {
+    width: 100%;
+    justify-self: center;
+    order: 2;
+  }
+  .header__logo {
+    order: 1;
+  }
+  .header__cabinet {
+    order: 3;
+  }
 }
