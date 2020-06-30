@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5de7d94718857f7cbdf66460ae2743ac",
+    "revision": "e30aafa92eab05dd158f051adab360ae",
     "url": "/nowayout/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nowayout/static/css/2.c3594674.chunk.css"
   },
   {
-    "revision": "92a423a125e52df97729",
-    "url": "/nowayout/static/css/main.c3fd2f5f.chunk.css"
+    "revision": "903f898bb5df35049b57",
+    "url": "/nowayout/static/css/main.361a88a4.chunk.css"
   },
   {
     "revision": "e6f4044dcefcdb410eda",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nowayout/static/js/2.65aeee97.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92a423a125e52df97729",
+    "revision": "903f898bb5df35049b57",
     "url": "/nowayout/static/js/main.f2eadbec.chunk.js"
   },
   {
