@@ -42,9 +42,17 @@ export default class Main extends React.Component {
         <Header />
         <main>
           <section className="section">
-            <OwlCarousel className="owl-carousel owl-theme" loop={true} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
-              responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-              <GameCards datos={cardData[0]} />
+            <OwlCarousel className="owl-carousel owl-theme" loop={true} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+              responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1360: { items: 5 } }}>
+              <GameCards datos={cardData[0]}>
+              <div className="flexcentaround card__discount white">
+                  <h2 className="morganiteBold">20% off</h2>
+                  <div>
+                    <h4 className="sansThin px14">Limited-time Deal</h4>
+                    <p className="sansBlack px18" id="counterStock" data-counter="2020-07-16T21:00:00">00 : 00 : 00 : 00</p>
+                  </div>
+                </div>
+              </GameCards>
               <GameCards datos={cardData[1]} />
               <GameCards datos={cardData[2]}>
                 <div className="flexcentaround card__discount white">
