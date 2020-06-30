@@ -391,6 +391,9 @@ i, .inlineblock, ::before, ::after, footer nav a {
   .header__cabinet {
     order: 3;
   }
+  .card__title {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -408,9 +411,6 @@ i, .inlineblock, ::before, ::after, footer nav a {
   }
   .card__discount p {
     font-size: 12px;
-  }
-  .card__title {
-    text-align: center;
   }
   .card__title h2 {
     font-size: 24px;
