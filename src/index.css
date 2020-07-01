@@ -394,6 +394,9 @@ i, .inlineblock, ::before, ::after, footer nav a {
   .card__title {
     text-align: center;
   }
+  .card__text.active::after {
+    margin-left: 5px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -419,7 +422,9 @@ i, .inlineblock, ::before, ::after, footer nav a {
     font-size: 9px;
   }
   .card__text.active::after {
-    top: -4px;
-    margin-left: 10px;
+    margin-left: unset;
+    top: 26px;
+    left: 0;
+    right: 0;
   }
 }

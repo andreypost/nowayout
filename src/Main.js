@@ -42,7 +42,7 @@ export default class Main extends React.Component {
         <Header />
         <main>
           <section className="section">
-            <OwlCarousel className="owl-carousel owl-theme" loop={true} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+            <OwlCarousel className="owl-carousel owl-theme" loop={true} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
               responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1360: { items: 5 } }}>
               <GameCards datos={cardData[0]}>
               <div className="flexcentaround card__discount white">
