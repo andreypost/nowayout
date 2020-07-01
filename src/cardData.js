@@ -12,7 +12,8 @@ export default [
         'clase': '',
         'title': 'Da Vinci',
         'descript': 'Mystery',
-        'href': '/'
+        'href': '/',
+        'timeout': '2020-07-16T21:00:00'
     },
     {
         // 1
@@ -20,7 +21,8 @@ export default [
         'clase': '',
         'title': 'Mission Belvedere',
         'descript': 'Action',
-        'href': '/'
+        'href': '/',
+        'timeout': '2020-07-16T21:00:00'
     },
     {
         // 2
@@ -28,7 +30,8 @@ export default [
         'clase': '',
         'title': 'School of magic',
         'descript': 'Adventure',
-        'href': '/'
+        'href': '/',
+        'timeout': '2020-07-16T24:00:00'
     },
     {
         // 3
@@ -36,7 +39,8 @@ export default [
         'clase': 'active',
         'title': 'The Unknown',
         'descript': 'Horror with live actor',
-        'href': '/'
+        'href': '/',
+        'timeout': '2020-07-16T21:00:00'
     },
     {
         // 4
@@ -44,6 +48,7 @@ export default [
         'clase': 'active',
         'title': 'The Nun',
         'descript': 'Horror with live actor',
-        'href': '/'
+        'href': '/',
+        'timeout': '2020-07-16T21:00:00'
     }
 ]

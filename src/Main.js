@@ -49,7 +49,7 @@ export default class Main extends React.Component {
                   <h2 className="morganiteBold">20% off</h2>
                   <div>
                     <h4 className="sansThin px14">Limited-time Deal</h4>
-                    <p className="sansBlack px18" id="counterStock" data-counter="2020-07-16T21:00:00">00 : 00 : 00 : 00</p>
+                    <p className="sansBlack px18" id="counterStock" data-counter={cardData[0].timeout}>00 : 00 : 00 : 00</p>
                   </div>
                 </div>
               </GameCards>
@@ -59,7 +59,7 @@ export default class Main extends React.Component {
                   <h2 className="morganiteBold">20% off</h2>
                   <div>
                     <h4 className="sansThin px14">Limited-time Deal</h4>
-                    <p className="sansBlack px18" id="counterStock" data-counter="2020-07-16T21:00:00">00 : 00 : 00 : 00</p>
+                    <p className="sansBlack px18" id="counterStock" data-counter={cardData[2].timeout}>00 : 00 : 00 : 00</p>
                   </div>
                 </div>
               </GameCards>
