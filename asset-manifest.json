@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nowayout/static/css/main.0c6565d7.chunk.css",
-    "main.js": "/nowayout/static/js/main.9fd39672.chunk.js",
-    "main.js.map": "/nowayout/static/js/main.9fd39672.chunk.js.map",
+    "main.js": "/nowayout/static/js/main.5464f329.chunk.js",
+    "main.js.map": "/nowayout/static/js/main.5464f329.chunk.js.map",
     "runtime-main.js": "/nowayout/static/js/runtime-main.48ab8189.js",
     "runtime-main.js.map": "/nowayout/static/js/runtime-main.48ab8189.js.map",
     "static/css/2.c3594674.chunk.css": "/nowayout/static/css/2.c3594674.chunk.css",
     "static/js/2.65aeee97.chunk.js": "/nowayout/static/js/2.65aeee97.chunk.js",
     "static/js/2.65aeee97.chunk.js.map": "/nowayout/static/js/2.65aeee97.chunk.js.map",
     "index.html": "/nowayout/index.html",
-    "precache-manifest.652ea3de16eaa7d0a731e6ffc73bf6f6.js": "/nowayout/precache-manifest.652ea3de16eaa7d0a731e6ffc73bf6f6.js",
+    "precache-manifest.6974c48709d1e9e93e54b6c9e7fe7245.js": "/nowayout/precache-manifest.6974c48709d1e9e93e54b6c9e7fe7245.js",
     "service-worker.js": "/nowayout/service-worker.js",
     "static/css/2.c3594674.chunk.css.map": "/nowayout/static/css/2.c3594674.chunk.css.map",
     "static/css/main.0c6565d7.chunk.css.map": "/nowayout/static/css/main.0c6565d7.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/css/2.c3594674.chunk.css",
     "static/js/2.65aeee97.chunk.js",
     "static/css/main.0c6565d7.chunk.css",
-    "static/js/main.9fd39672.chunk.js"
+    "static/js/main.5464f329.chunk.js"
   ]
 }
