@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import Header from './components/Header';
+import { Header } from './components/Header';
 import cardData from './cardData';
 import { GameCards } from './components/GameCards';
 
-export default class Main extends React.Component {
-  componentDidMount() {
+export const Main = () => {
+  useEffect(() => {
     window.scrollTo(0, 0)
+    let x = null
     const getAllCountersDownTimer = (elems) => {
       for (let elem of elems) {
         let time = new Date(elem.dataset.counter),
@@ -25,55 +26,53 @@ export default class Main extends React.Component {
           elem.innerHTML = hours + ' : ' + minutes + ' : ' + seconds
         }
         timer()
-        let x = setInterval(() => {
+        x = setInterval(() => {
           timer()
           if (distance < 0) clearInterval(x)
         }, 1000)
       }
     }
     getAllCountersDownTimer(document.querySelectorAll('#counterStock'))
-  }
-  componentWillUnmount() {
-    // clearInterval(x)
-  }
-  render() {
-    return (
-      <>
-        <Header />
-        <main>
-          <section className="section">
-            <OwlCarousel className="owl-carousel owl-theme" loop={true} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
-              responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1360: { items: 5 } }}>
-              <GameCards datos={cardData[0]}>
+    return () => {
+      clearInterval(x)
+    }
+  })
+  return (
+    <>
+      <Header />
+      <main>
+        <section className="section">
+          <OwlCarousel className="owl-carousel owl-theme" loop={true} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
+            responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1360: { items: 5 } }}>
+            <GameCards datos={cardData[0]}>
               <div className="flexcentaround card__discount white">
-                  <h2 className="morganiteBold">20% off</h2>
-                  <div>
-                    <h4 className="sansThin px14">Limited-time Deal</h4>
-                    <p className="sansBlack px18" id="counterStock" data-counter={cardData[0].timeout}>00 : 00 : 00 : 00</p>
-                  </div>
+                <h2 className="morganiteBold">20% off</h2>
+                <div>
+                  <h4 className="sansThin px14">Limited-time Deal</h4>
+                  <p className="sansBlack px18" id="counterStock" data-counter={cardData[0].timeout}>00 : 00 : 00 : 00</p>
                 </div>
-              </GameCards>
-              <GameCards datos={cardData[1]} />
-              <GameCards datos={cardData[2]}>
-                <div className="flexcentaround card__discount white">
-                  <h2 className="morganiteBold">20% off</h2>
-                  <div>
-                    <h4 className="sansThin px14">Limited-time Deal</h4>
-                    <p className="sansBlack px18" id="counterStock" data-counter={cardData[2].timeout}>00 : 00 : 00 : 00</p>
-                  </div>
+              </div>
+            </GameCards>
+            <GameCards datos={cardData[1]} />
+            <GameCards datos={cardData[2]}>
+              <div className="flexcentaround card__discount white">
+                <h2 className="morganiteBold">20% off</h2>
+                <div>
+                  <h4 className="sansThin px14">Limited-time Deal</h4>
+                  <p className="sansBlack px18" id="counterStock" data-counter={cardData[2].timeout}>00 : 00 : 00 : 00</p>
                 </div>
-              </GameCards>
-              <GameCards datos={cardData[3]} />
-              <GameCards datos={cardData[4]} />
-              <GameCards datos={cardData[0]} />
-              <GameCards datos={cardData[1]} />
-              <GameCards datos={cardData[2]} />
-              <GameCards datos={cardData[3]} />
-              <GameCards datos={cardData[4]} />
-            </OwlCarousel>
-          </section>
-        </main>
-      </>
-    );
-  }
+              </div>
+            </GameCards>
+            <GameCards datos={cardData[3]} />
+            <GameCards datos={cardData[4]} />
+            <GameCards datos={cardData[0]} />
+            <GameCards datos={cardData[1]} />
+            <GameCards datos={cardData[2]} />
+            <GameCards datos={cardData[3]} />
+            <GameCards datos={cardData[4]} />
+          </OwlCarousel>
+        </section>
+      </main>
+    </>
+  )
 }
