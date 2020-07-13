@@ -21,7 +21,7 @@ export const Header = () => {
                 i.classList.remove('active')
             }
         }
-    })
+    }, [])
     return (
         <header className="section sansBold">
             <nav className="grid header__nav">

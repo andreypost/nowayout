@@ -36,7 +36,7 @@ export const Main = () => {
     return () => {
       clearInterval(x)
     }
-  })
+  }, [])
   return (
     <>
       <Header />

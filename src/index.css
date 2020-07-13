@@ -378,7 +378,7 @@ i, .inlineblock, ::before, ::after, footer nav a {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 80px;
     grid-auto-rows: 60px;
-    margin: 60px auto;
+    margin: 20px auto 60px;
   }
   .header__links {
     width: 100%;
