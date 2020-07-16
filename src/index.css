@@ -240,7 +240,8 @@ i, .inlineblock, ::before, ::after, footer nav a {
   position: absolute;
   width: 60px;
   height: 2px;
-  transition: all .2s;
+  /* transition: all .2s; */
+  transition: transform .2s;
   background: white;
   z-index: 9999;
 }
@@ -259,6 +260,7 @@ i, .inlineblock, ::before, ::after, footer nav a {
 
 .header__burger i:nth-of-type(1).active, .header__burger i:nth-of-type(3).active {
   height: 3px;
+  background: red;
 }
 
 .header__burger i:nth-of-type(1).active {
